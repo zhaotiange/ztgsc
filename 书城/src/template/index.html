@@ -1,0 +1,44 @@
+<div class="swiper-container banner swiper-no-swiping">
+    <div class="swiper-wrapper">
+        {{#each data}}
+        <div class="swiper-slide">
+            <a href="javascript:;"><img src="{{ad_pic_url}}" title="{{ad_name}}"></a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<!-- 本周最火 -->
+<div class="bolck_list">
+    <h2>本周最火</h2>
+    <div class="week_hot"></div>
+</div>
+<!-- 重磅推荐 -->
+<div class="recommend_list">
+    <h2>重磅推荐</h2>
+    <div class="recommend_cont"></div>
+    <button class="change_btn" data-id="0" data="2">换一换</button>
+</div>
+<!-- 女生最爱 -->
+<div class="gril_love">
+    <h2>女生最爱</h2>
+    <div class="gril_cont"></div>
+    <button class="change_btn" data-id="0" data="3">换一换</button>
+</div>
+<!-- 男生最爱 -->
+<div class="boy_love">
+    <h2>男生最爱</h2>
+    <div class="boy_cont"></div>
+    <button class="change_btn" data-id="0" data="4">换一换</button>
+</div>
+<!-- 限时免费 -->
+<div class="bolck_list time_free"></div>
+<!-- 精选专题 -->
+<div class="sift_list">
+    <h2>精选专题</h2>
+    <div class="sift_cont"></div>
+</div>
+<!-- 上拉加载内容 -->
+<div class="load_cont">
+    <div class="load_cont_list"></div>
+    <p class="loading">加载更多</p>
+</div>

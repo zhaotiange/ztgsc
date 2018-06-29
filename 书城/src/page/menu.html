@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>详情页</title>
+    <link rel="stylesheet" href="../css/fonts2/iconfont.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <ul>
+                <li>
+                    <a href="javascript:history.back()" class="top_back">
+                        <i class="icon iconfont icon-xiangzuo"></i>
+                        <p class="header_title">目录</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://localhost:8888" class="home">
+                        <i class="icon iconfont icon-shouye"></i>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <main class="main">
+            <ul class="list"></ul>
+        </main>
+    </div>
+    <script class="text" type="text/x-handlebars-template">
+        {{#each this}}
+        <li class="{{#if active}}active{{/if}}"><span>{{title}}</span>{{#if free}}<em>免费</em>{{/if}}</li>
+        {{/each}}
+    </script>
+</body>
+
+</html>
+
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/config'], function() {
+        require(['menu'])
+    })
+</script>

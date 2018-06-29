@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-size: .14rem;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 625%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+a {
+  color: #000;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+body,
+html,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 0.5rem;
+  line-height: .5rem;
+  background: #eee;
+}
+
+.header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul li {
+  padding: 0 .1rem;
+  box-sizing: border-box;
+}
+
+.header ul li a p {
+  display: inline-block;
+  font-size: .16rem;
+  margin-left: .1rem;
+}
+
+.main {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.main ul li {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 .1rem;
+}
+
+.main ul li span {
+  width: 50%;
+  height: 0.4rem;
+  flex: 1;
+  font-weight: 900;
+  font-size: .16rem;
+}
+
+.main ul li em {
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.active {
+  color: orange;
+}

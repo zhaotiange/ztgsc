@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>阅读</title>
+    <link rel="stylesheet" href="../css/fonts2/iconfont.css">
+    <link rel="stylesheet" href="../css/text.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="menu">
+            <div class="top">
+                <a href="./detail.html?id=352876">
+                    <i class="icon iconfont icon-xiangzuo"></i>
+                    <span>返回</span>
+                </a>
+            </div>
+            <div class="bottom">
+                <div class="bot_top">
+                    <p class="prev_btn">上一章</p>
+                    <p><b class="cur"></b>/<b class="sum">4</b></p>
+                    <p class="next_btn">下一章</p>
+                </div>
+            </div>
+        </div>
+        <div class="content"></div>
+    </div>
+    <script class="text" type="text/x-handlebars-template">
+        <h2>{{t}}</h2>
+        {{#each p}}
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;{{this}}</p>
+        {{/each}}
+    </script>
+</body>
+
+</html>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/config'], function() {
+        require(['texts'])
+    })
+</script>

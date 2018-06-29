@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/fonts2/iconfont.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <form class="form">
+        <input type="text" class="text" placeholder="用户名">
+        <input type="password" class="pwd" placeholder="密码">
+        <span class="eye"><i class="icon iconfont icon-eyeoclose"></i></span>
+        <h3 class="tip"></h3>
+        <div class="btns">
+            <button class="log" type="button">登录</button>
+            <button class="reg" type="button">注册</button>
+        </div>
+    </form>
+</body>
+
+</html>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/config'], function() {
+        require(['login'])
+    })
+</script>

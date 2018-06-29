@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+    font-size: .14rem;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: 100%;
+}
+
+html {
+    font-size: 100px;
+}
+
+@mixin num($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin cir($w) {
+    width: $w;
+    height: $w;
+    border-radius: 50%;
+}
+
+@mixin flex($j:space-between) {
+    display: flex;
+    justify-content: $j;
+    align-items: center;
+}
+
+html,
+body,
+.wrap {
+    @include num(100%, 100%);
+}
+
+%text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 100%;
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: .1rem .3rem;
+    position: relative;
+    span {
+        position: absolute;
+        right: .32rem;
+        top: 1rem;
+    }
+    input {
+        @include num(100%, .4rem);
+        margin: .1rem 0;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: .2rem;
+    }
+    .btns {
+        @include num(100%, auto);
+        display: flex;
+        justify-content: space-around;
+        button {
+            @include num(50%, .4rem);
+            color: #fff;
+            border: none;
+            background: orangered;
+            margin: .2rem 0;
+            font-size: .18rem;
+            border-radius: .06rem;
+            &.reg {
+                background: #fff;
+                color: #000;
+                border: 1px solid #ccc;
+            }
+        }
+    }
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: .1rem;
+    img {
+        @include num(.5rem, .5rem);
+    }
+}

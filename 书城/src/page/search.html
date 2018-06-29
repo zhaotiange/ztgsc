@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>搜索</title>
+    <link rel="stylesheet" href="../css/fonts2/iconfont.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="icons">
+                <a href="http://localhost:6060"> <i class="icon iconfont icon-xiangzuo home"></i></a>
+            </div>
+            <div class="oInp">
+                <input type="text" placeholder="输入书名/作者/关键字">
+                <span class="btn">搜索</span>
+            </div>
+        </header>
+        <main class="main">
+            <div class="search_cont">
+            </div>
+            <div class="search_init">
+                <div class="search_history">
+                    <h2 class="title">历史记录</h2>
+                    <ul class="history_list">
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script class="text" type="text/x-handlebars-template">
+        {{#each ads}}
+        <a href="javascript:;">{{ad_name}}</a> {{/each}}
+    </script>
+    <script class="remove" type="text/x-handlebars-template">
+        {{#each this}}
+        <li>
+            <p>{{this}}</p><em class="remove" data-ind="{{@index}}">x</em>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(['../js/config'], function() {
+        require(['search'])
+    })
+</script>

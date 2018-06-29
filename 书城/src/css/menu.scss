@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: .14rem;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    font-size: 625%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+a {
+    color: #000;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+@mixin wenben($b:2) {
+    display: box;
+    display: -webkit-box;
+    word-break: break-all;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    line-clamp: $b;
+    -webkit-line-clamp: $b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin num($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin cir($c) {
+    width: $c;
+    height: $c;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@mixin flex($f:space-between) {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: $f;
+    -webkit-justify-content: $f;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+%text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+body,
+html,
+.wrap {
+    @include num(100%, 100%);
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    @include num(100%, .5rem);
+    line-height: .5rem;
+    background: #eee;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            padding: 0 .1rem;
+            box-sizing: border-box;
+            a {
+                p {
+                    display: inline-block;
+                    font-size: .16rem;
+                    margin-left: .1rem;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    flex: 1;
+    overflow-y: scroll;
+    ul {
+        li {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 0 .1rem;
+            span {
+                @include num(50%, .4rem);
+                flex: 1;
+                font-weight: 900;
+                font-size: .16rem;
+            }
+            em {
+                font-style: normal;
+                color: rgba(0, 0, 0, .4);
+            }
+        }
+    }
+}
+
+.active {
+    color: orange;
+}
